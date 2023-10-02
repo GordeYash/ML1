@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="{{url_for('static',filename='main.css')}}" rel="stylesheet">
+</head>
+
+<body>
+    <form action="{{url_for('home')}}" method="get">
+        <div class="main">
+            <h1>Employee Leaving Prediction</h1>
+            <div class="a">
+
+                <p>Enter a Employee Degree :</p>
+                <select name="Degree">
+                    <option value="Bachelors">Bachler</option>
+                    <option value="Masters">master</option>
+                    <option value="PHD">PHD</option>
+                </select>
+            </div>
+            <div class="a">
+                <p>Enter Joining Year :</p>
+                <input type="number" name="jyear" required>
+            </div>
+            <div class="a">
+                <p>Enter Payment Tier :</p>
+                <input type="number" name="tier" required>
+            </div>
+            <div class="a">
+                <p>Enter Age :</p>
+                <input type="number" name="age" required>
+            </div>
+            <div class="a">
+                <p>Ever Benched :</p>
+                <select name="eben">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="a">
+                <p>Enter experiance 0-7</p>
+                <input type="number" name="Experiance" required>
+            </div>
+            <div class="b">
+                <button type="submit" name="sub"> Submit</button>
+            </div>
+            {% if name %}
+            <p>{{name}}</p>
+            {% endif %}
+        </div>
+    </form>
+</body>
+
+</html>
